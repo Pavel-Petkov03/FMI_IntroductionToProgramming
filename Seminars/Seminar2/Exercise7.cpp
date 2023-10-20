@@ -6,11 +6,11 @@ int main() {
     double radius;
     double x, y;
     cin >> radius >> x >> y;
-    double distanceToPoint = sqrt(x * x + y * y);
-    if (distanceToPoint > radius) {
+    double distanceToPointSquared = x * x + y * y;
+    if (distanceToPointSquared > radius*radius) {
         cout << "Out of the circle" << endl;
     }
-    else if (distanceToPoint < radius) {
+    else if (distanceToPointSquared < radius*radius) {
         cout << "In the circle" << endl;
     }
     else {
